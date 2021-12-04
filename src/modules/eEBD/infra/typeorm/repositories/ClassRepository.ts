@@ -1,8 +1,10 @@
-import CreateClassDTO from '@modules/eEBD/dtos/CreateClassDTO';
 import { getRepository, Repository } from 'typeorm';
+
+import CreateClassDTO from '@modules/eEBD/dtos/CreateClassDTO';
+import IClassRepository from '@modules/eEBD/repositories/IClassRepository';
 import Class from '../entities/Class';
 
-class ClassRepository {
+class ClassRepository implements IClassRepository {
   private ormRepository: Repository<Class>;
 
   constructor() {

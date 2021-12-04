@@ -1,5 +1,4 @@
 import CreateEBDClassDTO from '../dtos/CreateEBDClassDTO';
-
 import EBDClass from '../infra/typeorm/entities/EBDClass';
 
 export default interface IEBDClassRepository {

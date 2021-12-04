@@ -1,9 +1,10 @@
 import { getRepository, Repository } from 'typeorm';
 
 import CreateEBDClassDTO from '@modules/eEBD/dtos/CreateEBDClassDTO';
+import IEBDClassRepository from '@modules/eEBD/repositories/IEBDClassRepository';
 import EBDClass from '../entities/EBDClass';
 
-class EBDClassRepository {
+class EBDClassRepository implements IEBDClassRepository {
   private ormRepository: Repository<EBDClass>;
 
   constructor() {

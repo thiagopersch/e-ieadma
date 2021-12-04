@@ -60,6 +60,30 @@ import ClassRepository from '@modules/eEBD/infra/typeorm/repositories/ClassRepos
 import IEBDClassRepository from '@modules/eEBD/repositories/IEBDClassRepository';
 import EBDClassRepository from '@modules/eEBD/infra/typeorm/repositories/EBDClassRepository';
 
+import IMagazineTypeRepository from '@modules/eEBD/repositories/IMagazineTypeRepository';
+import MagazineTypeRepository from '@modules/eEBD/infra/typeorm/repositories/MagazineTypeRepository';
+
+import IMagazineRepository from '@modules/eEBD/repositories/IMagazineRepository';
+import MagazineRepository from '@modules/eEBD/infra/typeorm/repositories/MagazineRepository';
+
+import ILessonMagazinesRepository from '@modules/eEBD/repositories/ILessonMagazinesRepository';
+import LessonMagazinesRepository from '@modules/eEBD/infra/typeorm/repositories/LessonMagazinesRepository';
+
+import LessonRepository from '@modules/eEBD/infra/typeorm/repositories/LessonRepository';
+import ILessonRepository from '@modules/eEBD/repositories/ILessonRepository';
+
+import IStudentsRepository from '@modules/eEBD/repositories/IStudentsRepository';
+import StudentRepository from '@modules/eEBD/infra/typeorm/repositories/StudentRepository';
+
+import IClassStudentsRepository from '@modules/eEBD/repositories/IClassStudentsRepository';
+import ClassStudentsRepository from '@modules/eEBD/infra/typeorm/repositories/ClassStudentsRepository';
+
+import IStudentClassCallDetailRepository from '@modules/eEBD/repositories/IStudentClassCallDetailRepository';
+import StudentClassCallDetailRepository from '@modules/eEBD/infra/typeorm/repositories/StudentClassCallDetailRepository';
+
+import IStudentClassCallDetailsTotalRepository from '@modules/eEBD/repositories/IStudentClassCallDetailsTotalRepository';
+import StudentClassCallDetailsTotalRepository from '@modules/eEBD/infra/typeorm/repositories/StudentClassCallDetailsTotalRepository';
+
 container.registerSingleton<IUsersRepository>(
   'UsersRepository',
   UsersRepository,
@@ -150,6 +174,46 @@ container.registerSingleton<IClassRepository>(
 container.registerSingleton<IEBDClassRepository>(
   'EBDClassRepository',
   EBDClassRepository,
+);
+
+container.registerSingleton<IMagazineTypeRepository>(
+  'MagazineTypeRepository',
+  MagazineTypeRepository,
+);
+
+container.registerSingleton<IMagazineRepository>(
+  'MagazineRepository',
+  MagazineRepository,
+);
+
+container.registerSingleton<ILessonRepository>(
+  'LessonRepository',
+  LessonRepository,
+);
+
+container.registerSingleton<ILessonMagazinesRepository>(
+  'LessonMagazinesRepository',
+  LessonMagazinesRepository,
+);
+
+container.registerSingleton<IStudentsRepository>(
+  'StudentRepository',
+  StudentRepository,
+);
+
+container.registerSingleton<IClassStudentsRepository>(
+  'ClassStudentsRepository',
+  ClassStudentsRepository,
+);
+
+container.registerSingleton<IStudentClassCallDetailRepository>(
+  'StudentClassCallDetailRepository',
+  StudentClassCallDetailRepository,
+);
+
+container.registerSingleton<IStudentClassCallDetailsTotalRepository>(
+  'StudentClassCallDetailsTotalRepository',
+  StudentClassCallDetailsTotalRepository,
 );
 
 container.registerSingleton<IHashProvider>('HashProvider', BCryptHashProvider);

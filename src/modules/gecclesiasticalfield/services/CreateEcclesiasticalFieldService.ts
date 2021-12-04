@@ -7,8 +7,18 @@ import IEcclesiasticalFieldRepository from '../repositories/IEcclesiasticalField
 
 type CreateEcclesiasticalFieldRequest = {
   NAME: string;
-  LOCATION: string;
   TYPE: BranchType;
+  STREET: string;
+  NUMBER: string;
+  DISTRICT: string;
+  COMPLEMENT?: string;
+  CEP: string;
+  CITY: string;
+  STATE: string;
+  COUNTRY: string;
+  PHONE: string;
+  PHONE_TWO?: string;
+  PHONE_THREE?: string;
 };
 
 @injectable()
@@ -20,14 +30,34 @@ class CreateEcclesiasticalFieldService {
 
   public async execute({
     NAME,
-    LOCATION,
     TYPE,
+    STREET,
+    NUMBER,
+    DISTRICT,
+    COMPLEMENT,
+    CEP,
+    CITY,
+    STATE,
+    COUNTRY,
+    PHONE,
+    PHONE_TWO,
+    PHONE_THREE,
   }: CreateEcclesiasticalFieldRequest): Promise<EcclesiasticalField> {
     const ecclesiasticalField = await this.ecclesiasticalFieldRepository.create(
       {
         NAME,
-        LOCATION,
         TYPE,
+        STREET,
+        NUMBER,
+        DISTRICT,
+        COMPLEMENT,
+        CEP,
+        CITY,
+        STATE,
+        COUNTRY,
+        PHONE,
+        PHONE_TWO,
+        PHONE_THREE,
       },
     );
     return ecclesiasticalField;

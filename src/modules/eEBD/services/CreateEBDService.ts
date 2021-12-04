@@ -8,6 +8,7 @@ type CreateEBDRequest = {
   DATE: Date;
   START_TIME: Date;
   FINAL_TIME: Date;
+  CALL_TIMEOUT: Date;
 };
 
 @injectable()
@@ -19,12 +20,14 @@ class CreateEBDService {
     DATE,
     START_TIME,
     FINAL_TIME,
+    CALL_TIMEOUT,
   }: CreateEBDRequest): Promise<EBD> {
     const ebd = await this.ebdRepository.create({
       ETRIMESTRE_ID,
       DATE,
       START_TIME,
       FINAL_TIME,
+      CALL_TIMEOUT,
     });
 
     return ebd;

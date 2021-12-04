@@ -14,11 +14,7 @@ import addressRouter from '@modules/gaddress/infra/http/routes/address.routes';
 import ecclesiasticalFieldRouter from '@modules/gecclesiasticalfield/infra/http/routes/ecclesiasticalField.routes';
 import appRouter from '@modules/core/infra/http/routes/app.routes';
 import churchMembersRouter from '@modules/achurchmembers/infra/http/routes/churchMembers.routes';
-import trimestreRouter from '@modules/eEBD/infra/http/routes/trimestre.routes';
-import ebdRouter from '@modules/eEBD/infra/http/routes/ebd.routes';
-import classTypeRouter from '@modules/eEBD/infra/http/routes/classType.routes';
-import classRouter from '@modules/eEBD/infra/http/routes/class.routes';
-import ebdClassRouter from '@modules/eEBD/infra/http/routes/ebdClass.routes';
+import ebdAppRouter from '@modules/eEBD/infra/http/routes/ebdApp.routes';
 
 import AppError from '@shared/errors/AppError';
 
@@ -38,11 +34,7 @@ app.use('/address', addressRouter);
 app.use('/ecclesiastical-field', ecclesiasticalFieldRouter);
 app.use('/app', appRouter);
 app.use('/church-members', churchMembersRouter);
-app.use('/trimestre', trimestreRouter);
-app.use('/ebd', ebdRouter);
-app.use('/class-type', classTypeRouter);
-app.use('/class', classRouter);
-app.use('/ebd-class', ebdClassRouter);
+app.use('/ebd', ebdAppRouter);
 
 app.use((err: Error, request: Request, response: Response, _: NextFunction) => {
   if (err instanceof AppError) {

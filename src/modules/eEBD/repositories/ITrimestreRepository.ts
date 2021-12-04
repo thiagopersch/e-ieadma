@@ -1,5 +1,4 @@
 import CreateTrimestreDTO from '../dtos/CreateTrimestreDTO';
-
 import Trimestre from '../infra/typeorm/entities/Trimestre';
 
 export default interface ITrimestreRepository {

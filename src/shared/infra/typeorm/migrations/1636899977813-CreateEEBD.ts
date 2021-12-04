@@ -34,6 +34,11 @@ export default class CreateEEBD1636899977813 implements MigrationInterface {
             isNullable: false,
           },
           {
+            name: 'CALL_TIMEOUT',
+            type: 'time without time zone',
+            isNullable: false,
+          },
+          {
             name: 'DELETED_AT',
             type: 'timestamptz',
             isNullable: true,

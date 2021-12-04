@@ -1,5 +1,4 @@
 import CreateClassTypeDTO from '../dtos/CreateClassTypeDTO';
-
 import ClassType from '../infra/typeorm/entities/ClassType';
 
 export default interface IClassTypeRepository {

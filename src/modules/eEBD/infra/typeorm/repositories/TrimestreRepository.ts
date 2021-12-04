@@ -1,10 +1,10 @@
 import { getRepository, Repository } from 'typeorm';
 
 import CreateTrimestreDTO from '@modules/eEBD/dtos/CreateTrimestreDTO';
-
+import ITrimestreRepository from '@modules/eEBD/repositories/ITrimestreRepository';
 import Trimestre from '../entities/Trimestre';
 
-class TrimestreRepository {
+class TrimestreRepository implements ITrimestreRepository {
   private ormRepository: Repository<Trimestre>;
 
   constructor() {

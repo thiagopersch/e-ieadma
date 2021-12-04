@@ -1,4 +1,5 @@
 import { inject, injectable } from 'tsyringe';
+
 import EBDClass from '../infra/typeorm/entities/EBDClass';
 import IEBDClassRepository from '../repositories/IEBDClassRepository';
 

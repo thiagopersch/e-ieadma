@@ -45,13 +45,33 @@ class EcclesiasticalFieldRepository implements IEcclesiasticalFieldRepository {
 
   public async create({
     NAME,
-    LOCATION,
     TYPE,
+    STREET,
+    NUMBER,
+    DISTRICT,
+    COMPLEMENT,
+    CEP,
+    CITY,
+    STATE,
+    COUNTRY,
+    PHONE,
+    PHONE_TWO,
+    PHONE_THREE,
   }: CreateEcclesiasticalFieldDTO): Promise<EcclesiasticalField> {
     const ecclesiasticalField = this.ormRepository.create({
       NAME,
-      LOCATION,
       TYPE,
+      STREET,
+      NUMBER,
+      DISTRICT,
+      COMPLEMENT,
+      CEP,
+      CITY,
+      STATE,
+      COUNTRY,
+      PHONE,
+      PHONE_TWO,
+      PHONE_THREE,
     });
     await this.ormRepository.save(ecclesiasticalField);
 

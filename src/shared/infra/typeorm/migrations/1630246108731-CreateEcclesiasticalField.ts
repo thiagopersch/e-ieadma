@@ -22,14 +22,64 @@ export default class CreateEcclesiasticalField1630246108731
             isNullable: false,
           },
           {
-            name: 'LOCATION',
+            name: 'TYPE',
+            type: 'enum',
+            enum: ['HEADQUARTER', 'CONGREGATION'],
+          },
+          {
+            name: 'STREET',
             type: 'varchar',
             isNullable: false,
           },
           {
-            name: 'TYPE',
-            type: 'enum',
-            enum: ['HEADQUARTER', 'CONGREGATION'],
+            name: 'NUMBER',
+            type: 'varchar',
+            isNullable: false,
+          },
+          {
+            name: 'DISTRICT',
+            type: 'varchar',
+            isNullable: false,
+          },
+          {
+            name: 'COMPLEMENT',
+            type: 'varchar',
+            isNullable: true,
+          },
+          {
+            name: 'CEP',
+            type: 'varchar',
+            isNullable: false,
+          },
+          {
+            name: 'CITY',
+            type: 'varchar',
+            isNullable: false,
+          },
+          {
+            name: 'STATE',
+            type: 'varchar',
+            isNullable: false,
+          },
+          {
+            name: 'COUNTRY',
+            type: 'varchar',
+            isNullable: false,
+          },
+          {
+            name: 'PHONE',
+            type: 'varchar',
+            isNullable: false,
+          },
+          {
+            name: 'PHONE_TWO',
+            type: 'varchar',
+            isNullable: true,
+          },
+          {
+            name: 'PHONE_THREE',
+            type: 'varchar',
+            isNullable: true,
           },
           {
             name: 'DELETED_AT',

@@ -2,7 +2,6 @@ import { inject, injectable } from 'tsyringe';
 import AppError from '@shared/errors/AppError';
 
 import ClassType from '../infra/typeorm/entities/ClassType';
-
 import IClassTypeRepository from '../repositories/IClassTypeRepository';
 
 type CreateClassTypeRequest = {

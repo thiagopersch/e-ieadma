@@ -179,7 +179,8 @@
 				"b1ee165e-fcc1-4068-9faa-f76d0ea2c334",
 				"cc5f0953-f90c-4fa0-bceb-bf96df1edf14",
 				"2ca7f858-1800-416f-970f-dbf0ed94922e",
-				"eca65e4e-95c0-4bc0-b194-4482092c2436"
+				"eca65e4e-95c0-4bc0-b194-4482092c2436",
+				"71ec4082-5fd2-4a3b-87ad-d4f2499017c9"
 			],
 			"lines": [],
 			"keys": [
@@ -1790,6 +1791,23 @@
 					}
 				},
 				{
+					"id": "5d4088c2-e856-41f0-ab0c-7f48042e44ed",
+					"name": "CALL_TIMEOUT",
+					"datatype": "time without time zone",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"list": false,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				},
+				{
 					"id": "cc759ce9-7f41-4d57-92d7-32024d0d9f7a",
 					"name": "DELETED_AT",
 					"datatype": "timestamp",
@@ -1843,7 +1861,8 @@
 			],
 			"relations": [
 				"3bec8da7-4823-439e-8ac9-d6fca8b2e607",
-				"4c8a424f-0331-466c-a2b2-d4f0d17803b4"
+				"4c8a424f-0331-466c-a2b2-d4f0d17803b4",
+				"79e55042-dae4-49ca-8f7f-49540d754011"
 			],
 			"lines": [],
 			"keys": [
@@ -1882,7 +1901,7 @@
 		"70a9058a-ffca-402b-aa4c-bb9e159fe598": {
 			"id": "70a9058a-ffca-402b-aa4c-bb9e159fe598",
 			"visible": true,
-			"name": "EMAGAZINESEAD",
+			"name": "EMAGAZINES",
 			"desc": "",
 			"cols": [
 				{
@@ -1941,6 +1960,23 @@
 					"param": "",
 					"pk": false,
 					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"list": false,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				},
+				{
+					"id": "97a27986-feca-4b45-b2e0-08ba00c17b28",
+					"name": "DESCRIPTION",
+					"datatype": "varchar",
+					"param": "",
+					"pk": false,
+					"nn": false,
 					"comment": "",
 					"defaultvalue": "",
 					"data": "",
@@ -2101,6 +2137,23 @@
 					"id": "35623212-dac5-4b62-88cd-5c905ae427e0",
 					"name": "DATE",
 					"datatype": "timestamp",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"list": false,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				},
+				{
+					"id": "a951637d-c7ed-4a6c-ae67-2ebde1d8e56c",
+					"name": "PAGE",
+					"datatype": "integer",
 					"param": "",
 					"pk": false,
 					"nn": true,
@@ -2330,7 +2383,9 @@
 			"relations": [
 				"c333580a-ac22-467e-9ae1-eed5bf14aa8d",
 				"2cfdf71a-5d9f-43e4-a2db-9cf3a9218096",
-				"5d9306fe-473b-410f-9fa3-f0fa8a3c35ad"
+				"5d9306fe-473b-410f-9fa3-f0fa8a3c35ad",
+				"a48aeeff-ef27-44bc-8778-00834bd318b1",
+				"565d2f99-8898-4067-86ed-63d14a8b9969"
 			],
 			"lines": [],
 			"keys": [
@@ -3204,7 +3259,7 @@
 		"f89bdc86-ce05-48ec-bac1-f02b7813a1ee": {
 			"id": "f89bdc86-ce05-48ec-bac1-f02b7813a1ee",
 			"visible": true,
-			"name": "ECALLCLASSSTUDENTS",
+			"name": "ESTUDENTCLASSCALLDETAILS",
 			"desc": "",
 			"cols": [
 				{
@@ -3242,7 +3297,7 @@
 				{
 					"id": "c32efac0-dc40-459a-971a-52a1d734197a",
 					"name": "PRESENCE",
-					"datatype": "integer",
+					"datatype": "boolean",
 					"param": "",
 					"pk": false,
 					"nn": true,
@@ -3258,8 +3313,8 @@
 				},
 				{
 					"id": "f70f2fb2-9560-46d0-94dc-afb8ccf1b950",
-					"name": "BIBLES",
-					"datatype": "integer",
+					"name": "BIBLE",
+					"datatype": "boolean",
 					"param": "",
 					"pk": false,
 					"nn": true,
@@ -3275,8 +3330,8 @@
 				},
 				{
 					"id": "50f2e29d-6352-46fa-9599-f8b0291e4349",
-					"name": "MAGAZINES",
-					"datatype": "integer",
+					"name": "MAGAZINE",
+					"datatype": "boolean",
 					"param": "",
 					"pk": false,
 					"nn": true,
@@ -3293,57 +3348,6 @@
 				{
 					"id": "46591b53-c22d-4f17-942b-e843bf676fcb",
 					"name": "OFFER",
-					"datatype": "integer",
-					"param": "",
-					"pk": false,
-					"nn": true,
-					"comment": "",
-					"defaultvalue": "",
-					"data": "",
-					"collation": null,
-					"list": false,
-					"after": "",
-					"pg": {
-						"generatedIdentity": "no"
-					}
-				},
-				{
-					"id": "65635b70-6e6a-4cc4-9c6f-0f346badcd20",
-					"name": "VISITOR_QUANTITY",
-					"datatype": "integer",
-					"param": "",
-					"pk": false,
-					"nn": true,
-					"comment": "",
-					"defaultvalue": "",
-					"data": "",
-					"collation": null,
-					"list": false,
-					"after": "",
-					"pg": {
-						"generatedIdentity": "no"
-					}
-				},
-				{
-					"id": "a160af5e-ef7f-402d-b3f9-19bdbbeed13d",
-					"name": "ENROLLED",
-					"datatype": "integer",
-					"param": "",
-					"pk": false,
-					"nn": true,
-					"comment": "",
-					"defaultvalue": "",
-					"data": "",
-					"collation": null,
-					"list": false,
-					"after": "",
-					"pg": {
-						"generatedIdentity": "no"
-					}
-				},
-				{
-					"id": "2b55903a-d419-4ee0-b87f-7a7beb433d8a",
-					"name": "PERCENTAGE",
 					"datatype": "integer",
 					"param": "",
 					"pk": false,
@@ -3376,26 +3380,9 @@
 					}
 				},
 				{
-					"id": "cf2c772f-40ca-4bb8-a566-7c5db821e7ac",
-					"name": "LIMIT_TIME",
-					"datatype": "time without time zone",
-					"param": "",
-					"pk": false,
-					"nn": true,
-					"comment": "",
-					"defaultvalue": "",
-					"data": "",
-					"collation": null,
-					"list": false,
-					"after": "",
-					"pg": {
-						"generatedIdentity": "no"
-					}
-				},
-				{
 					"id": "c8ed4066-8f1a-4fa6-ad26-7a58ad1acb79",
 					"name": "DELETED_AT",
-					"datatype": "timestamp",
+					"datatype": "timestamptz",
 					"param": "",
 					"pk": false,
 					"nn": false,
@@ -3412,7 +3399,7 @@
 				{
 					"id": "1f9a03a3-0fed-41ef-a50e-9cff568da0ec",
 					"name": "CREATED_AT",
-					"datatype": "timestamp",
+					"datatype": "timestamptz",
 					"param": "",
 					"pk": false,
 					"nn": false,
@@ -3429,7 +3416,7 @@
 				{
 					"id": "ffd823b4-9c57-4644-b0eb-372e0afbfda0",
 					"name": "UPDATED_AT",
-					"datatype": "timestamp",
+					"datatype": "timestamptz",
 					"param": "",
 					"pk": false,
 					"nn": false,
@@ -3445,8 +3432,7 @@
 				}
 			],
 			"relations": [
-				"f41741f4-2074-4648-9223-52f1c4ff5424",
-				"9c7ede62-8453-49fa-95f6-ac7f0457c105"
+				"f41741f4-2074-4648-9223-52f1c4ff5424"
 			],
 			"lines": [],
 			"keys": [
@@ -3485,7 +3471,7 @@
 		"d9a7e2f8-34c5-4dbd-b7d1-7240314fc4f6": {
 			"id": "d9a7e2f8-34c5-4dbd-b7d1-7240314fc4f6",
 			"visible": true,
-			"name": "ECALLCLASSSTUDENTSTOTAL",
+			"name": "ERESULTEBD",
 			"desc": "",
 			"cols": [
 				{
@@ -3504,8 +3490,8 @@
 					}
 				},
 				{
-					"id": "6945b526-a269-445f-a9a5-e5e63eef5a66",
-					"name": "ECALLCLASSSTUDENTS_ID",
+					"id": "3939dca5-cd69-4964-afe9-62e5e7100f15",
+					"name": "GUSERS_ID",
 					"datatype": "uuid",
 					"pk": false,
 					"nn": true,
@@ -3518,7 +3504,58 @@
 						"generatedIdentity": "no"
 					},
 					"fk": true,
-					"ref": "ECALLCLASSSTUDENTS"
+					"ref": "GUSERS"
+				},
+				{
+					"id": "98c41ad7-2b08-4181-943a-dbb3bd54f289",
+					"name": "EEBD_ID",
+					"datatype": "uuid",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					},
+					"fk": true,
+					"ref": "EEBD"
+				},
+				{
+					"id": "3dc58fb6-5663-4098-891b-7ffb5aaa1cb7",
+					"name": "ECLASS_ID",
+					"datatype": "uuid",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					},
+					"fk": true,
+					"ref": "ECLASS"
+				},
+				{
+					"id": "9b842981-1dc6-4ac0-9c76-b89cb1e904ce",
+					"name": "DATE",
+					"datatype": "timestamp",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"list": false,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
 				},
 				{
 					"id": "ee2ce5ad-e659-451d-a709-8377f9bb1a6d",
@@ -3692,7 +3729,9 @@
 				}
 			],
 			"relations": [
-				"9c7ede62-8453-49fa-95f6-ac7f0457c105"
+				"71ec4082-5fd2-4a3b-87ad-d4f2499017c9",
+				"79e55042-dae4-49ca-8f7f-49540d754011",
+				"a48aeeff-ef27-44bc-8778-00834bd318b1"
 			],
 			"lines": [],
 			"keys": [
@@ -4201,7 +4240,7 @@
 				},
 				{
 					"id": "fc8d9949-a1a4-4fe7-9501-5ef9170e6a1b",
-					"name": "EMAGAZINESEAD_ID",
+					"name": "EMAGAZINES_ID",
 					"datatype": "uuid",
 					"pk": false,
 					"nn": true,
@@ -4328,7 +4367,7 @@
 			"id": "b15227d6-fcf0-45e0-8db7-9c6f96efce83",
 			"visible": true,
 			"name": "EMAGAZINETYPE",
-			"desc": "",
+			"desc": "TIPO DA REVISTA\na. ALUNO\nb. PROFESSOR",
 			"cols": [
 				{
 					"id": "45aa0f9f-6726-43c5-b58c-ace23a4e3c4c",
@@ -4508,7 +4547,194 @@
 				},
 				{
 					"id": "63c023d9-d7e9-4618-b217-d571bac45839",
-					"name": "LOCATION",
+					"name": "TYPE",
+					"datatype": "ccc7fa85-69b1-4a83-b277-03e062653595",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"list": false,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				},
+				{
+					"id": "1e5ddf9f-0ecb-42e9-9f0e-6999bce74770",
+					"name": "STREET",
+					"datatype": "varchar",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"list": false,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				},
+				{
+					"id": "45734881-e8db-45a5-84a2-20cb14f6a41a",
+					"name": "NUMBER",
+					"datatype": "varchar",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"list": false,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				},
+				{
+					"id": "9be8769d-19f4-46cd-bf42-34ab135abe8f",
+					"name": "DISTRICT",
+					"datatype": "varchar",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"list": false,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				},
+				{
+					"id": "8eace3ba-4b0c-4502-92fd-e54f534d9448",
+					"name": "COMPLEMENT",
+					"datatype": "varchar",
+					"param": "",
+					"pk": false,
+					"nn": false,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"list": false,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				},
+				{
+					"id": "3de684a9-d87d-4596-90ff-b748ea30360e",
+					"name": "CEP",
+					"datatype": "varchar",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"list": false,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				},
+				{
+					"id": "edc06aa1-f7c6-4cb1-81c3-5b1526bdf3f4",
+					"name": "CITY",
+					"datatype": "varchar",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"list": false,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				},
+				{
+					"id": "86155edf-5d1b-47c0-a1b5-28a8dcf9a351",
+					"name": "STATE",
+					"datatype": "varchar",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"list": false,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				},
+				{
+					"id": "7b6f3c71-74cc-4f90-8986-2ca1d72aad14",
+					"name": "COUNTRY",
+					"datatype": "varchar",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"list": false,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				},
+				{
+					"id": "dfbb0a4d-7d57-4f67-bc26-a42c7df42dab",
+					"name": "PHONE",
+					"datatype": "varchar",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"list": false,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				},
+				{
+					"id": "c61ed13f-fe5b-4608-bfda-fc426007ae90",
+					"name": "PHONE_TWO",
+					"datatype": "varchar",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"list": false,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				},
+				{
+					"id": "f5478baf-a373-466c-88f7-40a79d979c71",
+					"name": "PHONE_THREE",
 					"datatype": "varchar",
 					"param": "",
 					"pk": false,
@@ -4526,7 +4752,7 @@
 				{
 					"id": "fec12db9-9dd2-441a-8ee1-3f2d1e6fe24b",
 					"name": "DELETED_AT",
-					"datatype": "timestamp",
+					"datatype": "timestamptz",
 					"param": "",
 					"pk": false,
 					"nn": false,
@@ -4543,7 +4769,7 @@
 				{
 					"id": "724baa5a-e457-46e2-b591-7e7737f4b78b",
 					"name": "CREATED_AT",
-					"datatype": "timestamp",
+					"datatype": "timestamptz",
 					"param": "",
 					"pk": false,
 					"nn": false,
@@ -4560,7 +4786,7 @@
 				{
 					"id": "2a62b459-0540-4a1a-b0c9-c0abda066568",
 					"name": "UPDATED_AT",
-					"datatype": "timestamp",
+					"datatype": "timestamptz",
 					"param": "",
 					"pk": false,
 					"nn": false,
@@ -4952,6 +5178,252 @@
 			"color": "#ffffff",
 			"background": "#03a9f4",
 			"resized": false,
+			"estimatedSize": ""
+		},
+		"29fe7667-9caa-4908-82fe-7e3c8f5d8251": {
+			"id": "29fe7667-9caa-4908-82fe-7e3c8f5d8251",
+			"visible": true,
+			"name": "ESTUDENTCLASSCALLDETAILSTOTAL",
+			"desc": "",
+			"cols": [
+				{
+					"id": "510cb93d-9086-47d5-95e4-48432d1527b0",
+					"name": "ID",
+					"datatype": "uuid",
+					"pk": true,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				},
+				{
+					"id": "6e0e1388-6581-4ca4-8476-c65742cbbdf5",
+					"name": "ECLASS_ID",
+					"datatype": "uuid",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					},
+					"fk": true,
+					"ref": "ECLASS"
+				},
+				{
+					"id": "c32efac0-dc40-459a-971a-52a1d734197a",
+					"name": "PRESENCES",
+					"datatype": "integer",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"list": false,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				},
+				{
+					"id": "f70f2fb2-9560-46d0-94dc-afb8ccf1b950",
+					"name": "BIBLES",
+					"datatype": "integer",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"list": false,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				},
+				{
+					"id": "50f2e29d-6352-46fa-9599-f8b0291e4349",
+					"name": "MAGAZINES",
+					"datatype": "integer",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"list": false,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				},
+				{
+					"id": "46591b53-c22d-4f17-942b-e843bf676fcb",
+					"name": "OFFER",
+					"datatype": "integer",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"list": false,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				},
+				{
+					"id": "65635b70-6e6a-4cc4-9c6f-0f346badcd20",
+					"name": "VISITOR_QUANTITY",
+					"datatype": "integer",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"list": false,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				},
+				{
+					"id": "a160af5e-ef7f-402d-b3f9-19bdbbeed13d",
+					"name": "REGISTERED",
+					"datatype": "integer",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"list": false,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				},
+				{
+					"id": "2b55903a-d419-4ee0-b87f-7a7beb433d8a",
+					"name": "PERCENTAGE",
+					"datatype": "integer",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"list": false,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				},
+				{
+					"id": "c8ed4066-8f1a-4fa6-ad26-7a58ad1acb79",
+					"name": "DELETED_AT",
+					"datatype": "timestamp",
+					"param": "",
+					"pk": false,
+					"nn": false,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"list": false,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				},
+				{
+					"id": "1f9a03a3-0fed-41ef-a50e-9cff568da0ec",
+					"name": "CREATED_AT",
+					"datatype": "timestamp",
+					"param": "",
+					"pk": false,
+					"nn": false,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"list": false,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				},
+				{
+					"id": "ffd823b4-9c57-4644-b0eb-372e0afbfda0",
+					"name": "UPDATED_AT",
+					"datatype": "timestamp",
+					"param": "",
+					"pk": false,
+					"nn": false,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"list": false,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				}
+			],
+			"relations": [
+				"565d2f99-8898-4067-86ed-63d14a8b9969"
+			],
+			"lines": [],
+			"keys": [
+				{
+					"id": "6bd8b268-58d7-48ae-840f-3213b5bd81de",
+					"name": "Primary key",
+					"isPk": true,
+					"using": "",
+					"cols": [
+						{
+							"id": "88e75ae5-277d-476f-8034-41ec9ef44f20",
+							"colid": "510cb93d-9086-47d5-95e4-48432d1527b0"
+						}
+					]
+				}
+			],
+			"indexes": [],
+			"embeddable": false,
+			"objectType": "table",
+			"pg": {
+				"rowsecurity": false,
+				"schema": ""
+			},
+			"referencedItemId": "f89bdc86-ce05-48ec-bac1-f02b7813a1ee",
+			"x": 801,
+			"y": 1179,
+			"gHeight": 286,
+			"gWidth": 264,
+			"color": "#ffffff",
+			"background": "#3f51b5",
+			"resized": false,
+			"generate": true,
+			"generateCustomCode": true,
 			"estimatedSize": ""
 		}
 	},
@@ -5456,31 +5928,6 @@
 			"c_cp": "",
 			"c_cch": ""
 		},
-		"9c7ede62-8453-49fa-95f6-ac7f0457c105": {
-			"id": "9c7ede62-8453-49fa-95f6-ac7f0457c105",
-			"visible": true,
-			"name": "ECALLCLASSSTUDENTS-ECALLCLASSSTUDENTSTOTAL",
-			"desc": "",
-			"type": "identifying",
-			"parent_key": "4ce62196-6acf-476e-867b-0c8a52ea1329",
-			"parent": "f89bdc86-ce05-48ec-bac1-f02b7813a1ee",
-			"child": "d9a7e2f8-34c5-4dbd-b7d1-7240314fc4f6",
-			"c_mp": "true",
-			"c_mch": "true",
-			"cols": [
-				{
-					"id": "056de652-37b7-423c-8d38-a0497eda8be1",
-					"parentcol": "510cb93d-9086-47d5-95e4-48432d1527b0",
-					"childcol": "6945b526-a269-445f-a9a5-e5e63eef5a66"
-				}
-			],
-			"generate": true,
-			"generateCustomCode": true,
-			"c_p": "one",
-			"c_ch": "many",
-			"c_cp": "",
-			"c_cch": ""
-		},
 		"4c8a424f-0331-466c-a2b2-d4f0d17803b4": {
 			"id": "4c8a424f-0331-466c-a2b2-d4f0d17803b4",
 			"visible": true,
@@ -5655,6 +6102,106 @@
 			"c_ch": "many",
 			"c_cp": "",
 			"c_cch": ""
+		},
+		"71ec4082-5fd2-4a3b-87ad-d4f2499017c9": {
+			"id": "71ec4082-5fd2-4a3b-87ad-d4f2499017c9",
+			"visible": true,
+			"name": "GUSERS_ESTUDENTCLASSCALLDETAILSTOTAL",
+			"desc": "",
+			"type": "identifying",
+			"parent_key": "ccfeef28-b756-4702-ada8-b1ca6b44ce70",
+			"parent": "13995bac-feb8-4cfb-96c9-50d150caaf53",
+			"child": "d9a7e2f8-34c5-4dbd-b7d1-7240314fc4f6",
+			"c_mp": "true",
+			"c_mch": "true",
+			"c_p": "one",
+			"c_ch": "many",
+			"c_cp": "",
+			"c_cch": "",
+			"cols": [
+				{
+					"id": "7aa268c9-b82f-41f3-8f31-75e138717b88",
+					"parentcol": "ddc39c50-bf30-46d5-bbc8-752b97d8a9af",
+					"childcol": "3939dca5-cd69-4964-afe9-62e5e7100f15"
+				}
+			],
+			"generate": true,
+			"generateCustomCode": true
+		},
+		"79e55042-dae4-49ca-8f7f-49540d754011": {
+			"id": "79e55042-dae4-49ca-8f7f-49540d754011",
+			"visible": true,
+			"name": "EEBD_ESTUDENTCLASSCALLDETAILSTOTAL",
+			"desc": "",
+			"type": "identifying",
+			"parent_key": "d899c050-d83d-4683-ac88-859af1159303",
+			"parent": "2432d942-d011-4516-91a8-6159ba15497e",
+			"child": "d9a7e2f8-34c5-4dbd-b7d1-7240314fc4f6",
+			"c_mp": "true",
+			"c_mch": "true",
+			"c_p": "one",
+			"c_ch": "many",
+			"c_cp": "",
+			"c_cch": "",
+			"cols": [
+				{
+					"id": "b27dbc1e-7d00-463d-9111-2344fe8e92a0",
+					"parentcol": "874e8a06-dbd0-4c8b-897e-5abf7da9aefe",
+					"childcol": "98c41ad7-2b08-4181-943a-dbb3bd54f289"
+				}
+			],
+			"generate": true,
+			"generateCustomCode": true
+		},
+		"a48aeeff-ef27-44bc-8778-00834bd318b1": {
+			"id": "a48aeeff-ef27-44bc-8778-00834bd318b1",
+			"visible": true,
+			"name": "ECLASS_ERESULTEBD",
+			"desc": "",
+			"type": "identifying",
+			"parent_key": "b84dc168-0b62-42e3-9bed-0b43384b80e5",
+			"parent": "8909ac3a-6706-4b3e-bb8e-49e01e8030f3",
+			"child": "d9a7e2f8-34c5-4dbd-b7d1-7240314fc4f6",
+			"c_mp": "true",
+			"c_mch": "true",
+			"c_p": "one",
+			"c_ch": "many",
+			"c_cp": "",
+			"c_cch": "",
+			"cols": [
+				{
+					"id": "f456f320-c063-467b-a602-0ef96b8b708c",
+					"parentcol": "6d9ebd49-0aac-4ce4-a066-0277bd24caaf",
+					"childcol": "3dc58fb6-5663-4098-891b-7ffb5aaa1cb7"
+				}
+			],
+			"generate": true,
+			"generateCustomCode": true
+		},
+		"565d2f99-8898-4067-86ed-63d14a8b9969": {
+			"id": "565d2f99-8898-4067-86ed-63d14a8b9969",
+			"visible": true,
+			"name": "ECLASS_ESTUDENTCLASSCALLDETAILSTOTAL",
+			"desc": "",
+			"type": "identifying",
+			"parent_key": "b84dc168-0b62-42e3-9bed-0b43384b80e5",
+			"parent": "8909ac3a-6706-4b3e-bb8e-49e01e8030f3",
+			"child": "29fe7667-9caa-4908-82fe-7e3c8f5d8251",
+			"c_mp": "true",
+			"c_mch": "true",
+			"c_p": "one",
+			"c_ch": "many",
+			"c_cp": "",
+			"c_cch": "",
+			"cols": [
+				{
+					"id": "b11eef18-7845-4ada-8fef-99e7c83ebedd",
+					"parentcol": "6d9ebd49-0aac-4ce4-a066-0277bd24caaf",
+					"childcol": "6e0e1388-6581-4ca4-8476-c65742cbbdf5"
+				}
+			],
+			"generate": true,
+			"generateCustomCode": true
 		}
 	},
 	"notes": {},
@@ -5682,7 +6229,7 @@
 		"pg": {
 			"schema": ""
 		},
-		"lastSaved": "Sun Nov 14 2021 17:15:53 GMT-0400 (Horário Padrão do Amazonas)",
+		"lastSaved": "Mon Nov 22 2021 21:42:35 GMT-0400 (Horário Padrão do Amazonas)",
 		"writeFileParam": false,
 		"schemaContainerIsDisplayed": false,
 		"embeddedInParentsIsDisplayed": true,
@@ -5703,7 +6250,23 @@
 		},
 		"cardinalityIsDisplayed": false
 	},
-	"otherObjects": {},
+	"otherObjects": {
+		"ccc7fa85-69b1-4a83-b277-03e062653595": {
+			"id": "ccc7fa85-69b1-4a83-b277-03e062653595",
+			"visible": true,
+			"name": "TYPEECCLESIASTICALFIELD",
+			"desc": "",
+			"type": "Enum",
+			"code": "",
+			"lines": [],
+			"generate": true,
+			"generateCustomCode": true,
+			"pg": {
+				"schema": ""
+			},
+			"enumValues": "'HEADQUARTER', 'CONGREGATION'"
+		}
+	},
 	"diagrams": {
 		"fe44e73f-51be-45b0-9ca5-a01b9ccd994f": {
 			"name": "Main Diagram",
@@ -5711,7 +6274,7 @@
 			"id": "fe44e73f-51be-45b0-9ca5-a01b9ccd994f",
 			"keysgraphics": true,
 			"linegraphics": "detailed",
-			"zoom": 0.9,
+			"zoom": 1.5000000000000004,
 			"background": "transparent",
 			"lineColor": "transparent",
 			"isOpen": true,
@@ -5774,8 +6337,8 @@
 				},
 				"521d5b3e-08de-411e-a215-af523e92b6a0": {
 					"referencedItemId": "521d5b3e-08de-411e-a215-af523e92b6a0",
-					"x": 3281,
-					"y": 1141,
+					"x": 2801,
+					"y": 1401,
 					"gHeight": 261,
 					"gWidth": 244,
 					"color": "#ffffff",
@@ -5796,10 +6359,10 @@
 				},
 				"2432d942-d011-4516-91a8-6159ba15497e": {
 					"referencedItemId": "2432d942-d011-4516-91a8-6159ba15497e",
-					"x": 2316,
-					"y": 1161,
-					"gHeight": 171,
-					"gWidth": 301,
+					"x": 2021,
+					"y": 1357,
+					"gHeight": 189,
+					"gWidth": 319,
 					"color": "#ffffff",
 					"background": "#9c27b0",
 					"resized": false,
@@ -5807,9 +6370,9 @@
 				},
 				"70a9058a-ffca-402b-aa4c-bb9e159fe598": {
 					"referencedItemId": "70a9058a-ffca-402b-aa4c-bb9e159fe598",
-					"x": 1623,
-					"y": 1255,
-					"gHeight": 153,
+					"x": 1380,
+					"y": 1542,
+					"gHeight": 171,
 					"gWidth": 250,
 					"color": "#ffffff",
 					"background": "#673ab7",
@@ -5818,9 +6381,9 @@
 				},
 				"df09e05d-4dd9-4071-98b6-19da0cac5b6e": {
 					"referencedItemId": "df09e05d-4dd9-4071-98b6-19da0cac5b6e",
-					"x": 1619,
-					"y": 1513,
-					"gHeight": 153,
+					"x": 1102,
+					"y": 1795,
+					"gHeight": 171,
 					"gWidth": 244,
 					"color": "#ffffff",
 					"background": "#673ab7",
@@ -5829,8 +6392,8 @@
 				},
 				"8909ac3a-6706-4b3e-bb8e-49e01e8030f3": {
 					"referencedItemId": "8909ac3a-6706-4b3e-bb8e-49e01e8030f3",
-					"x": 2855,
-					"y": 1421,
+					"x": 2392,
+					"y": 1664,
 					"gHeight": 153,
 					"gWidth": 244,
 					"color": "#ffffff",
@@ -5840,8 +6403,8 @@
 				},
 				"9bfb133e-cb4e-4e81-90f3-45848a0a51b5": {
 					"referencedItemId": "9bfb133e-cb4e-4e81-90f3-45848a0a51b5",
-					"x": 2902,
-					"y": 1655,
+					"x": 2647,
+					"y": 1772,
 					"gHeight": 117,
 					"gWidth": 267,
 					"color": "#ffffff",
@@ -5851,8 +6414,8 @@
 				},
 				"0f80ffea-2cc3-46f9-88da-0535dace6f0d": {
 					"referencedItemId": "0f80ffea-2cc3-46f9-88da-0535dace6f0d",
-					"x": 2437,
-					"y": 1648,
+					"x": 1974,
+					"y": 1864,
 					"gHeight": 153,
 					"gWidth": 280,
 					"color": "#ffffff",
@@ -5862,8 +6425,8 @@
 				},
 				"7b0fb8f5-2e6e-4b11-b60e-0304ffb36211": {
 					"referencedItemId": "7b0fb8f5-2e6e-4b11-b60e-0304ffb36211",
-					"x": 1946,
-					"y": 1038,
+					"x": 1681,
+					"y": 1391,
 					"gHeight": 153,
 					"gWidth": 244,
 					"color": "#ffffff",
@@ -5906,10 +6469,10 @@
 				},
 				"f89bdc86-ce05-48ec-bac1-f02b7813a1ee": {
 					"referencedItemId": "f89bdc86-ce05-48ec-bac1-f02b7813a1ee",
-					"x": 1954,
-					"y": 1551,
-					"gHeight": 279,
-					"gWidth": 297,
+					"x": 1625,
+					"y": 1991,
+					"gHeight": 207,
+					"gWidth": 257,
 					"color": "#ffffff",
 					"background": "#3f51b5",
 					"resized": false,
@@ -5917,9 +6480,9 @@
 				},
 				"d9a7e2f8-34c5-4dbd-b7d1-7240314fc4f6": {
 					"referencedItemId": "d9a7e2f8-34c5-4dbd-b7d1-7240314fc4f6",
-					"x": 2358,
-					"y": 1869,
-					"gHeight": 243,
+					"x": 2797,
+					"y": 1939,
+					"gHeight": 297,
 					"gWidth": 300,
 					"color": "#ffffff",
 					"background": "#3f51b5",
@@ -5928,8 +6491,8 @@
 				},
 				"feaaf064-1a6f-491f-b6e6-4d52071348c9": {
 					"referencedItemId": "feaaf064-1a6f-491f-b6e6-4d52071348c9",
-					"x": 2438,
-					"y": 1393,
+					"x": 1848,
+					"y": 1651,
 					"gHeight": 135,
 					"gWidth": 244,
 					"color": "#ffffff",
@@ -5950,8 +6513,8 @@
 				},
 				"95d16da3-69f9-476b-aa47-36f7c561a475": {
 					"referencedItemId": "95d16da3-69f9-476b-aa47-36f7c561a475",
-					"x": 2850,
-					"y": 1230,
+					"x": 2433,
+					"y": 1469,
 					"gHeight": 135,
 					"gWidth": 244,
 					"color": "#ffffff",
@@ -5961,10 +6524,10 @@
 				},
 				"d405e82a-fb26-4209-af66-d22bcae22a62": {
 					"referencedItemId": "d405e82a-fb26-4209-af66-d22bcae22a62",
-					"x": 1991,
-					"y": 1339,
+					"x": 1492,
+					"y": 1779,
 					"gHeight": 135,
-					"gWidth": 252,
+					"gWidth": 244,
 					"color": "#ffffff",
 					"background": "#673ab7",
 					"resized": false,
@@ -5972,8 +6535,8 @@
 				},
 				"b15227d6-fcf0-45e0-8db7-9c6f96efce83": {
 					"referencedItemId": "b15227d6-fcf0-45e0-8db7-9c6f96efce83",
-					"x": 1304,
-					"y": 1292,
+					"x": 1021,
+					"y": 1575,
 					"gHeight": 135,
 					"gWidth": 244,
 					"color": "#ffffff",
@@ -5983,10 +6546,10 @@
 				},
 				"7ee9f670-0d37-4407-9b04-6ca47bf23157": {
 					"referencedItemId": "7ee9f670-0d37-4407-9b04-6ca47bf23157",
-					"x": 2327,
-					"y": 932,
-					"gHeight": 135,
-					"gWidth": 244,
+					"x": 2315,
+					"y": 809,
+					"gHeight": 333,
+					"gWidth": 278,
 					"color": "#ffffff",
 					"background": "#ff5722",
 					"resized": false,
@@ -6013,6 +6576,28 @@
 					"background": "#03a9f4",
 					"resized": false,
 					"autoExpand": true
+				},
+				"29fe7667-9caa-4908-82fe-7e3c8f5d8251": {
+					"referencedItemId": "29fe7667-9caa-4908-82fe-7e3c8f5d8251",
+					"x": 2329,
+					"y": 1993,
+					"gHeight": 243,
+					"gWidth": 292,
+					"color": "#ffffff",
+					"background": "#3f51b5",
+					"resized": false,
+					"autoExpand": true
+				},
+				"ccc7fa85-69b1-4a83-b277-03e062653595": {
+					"referencedItemId": "ccc7fa85-69b1-4a83-b277-03e062653595",
+					"x": 1310,
+					"y": 655,
+					"gHeight": 44,
+					"gWidth": 169,
+					"color": "#eee",
+					"background": "#9c27b0",
+					"resized": false,
+					"autoExpand": true
 				}
 			},
 			"scroll": {
@@ -6022,6 +6607,7 @@
 		}
 	},
 	"order": [
+		"ccc7fa85-69b1-4a83-b277-03e062653595",
 		"5c486f58-8649-407a-9ea6-e41b3746a77d",
 		"f89bdc86-ce05-48ec-bac1-f02b7813a1ee",
 		"d9a7e2f8-34c5-4dbd-b7d1-7240314fc4f6",
@@ -6049,8 +6635,8 @@
 		"de03f348-66c3-4ec3-ab55-35c93a6b4f54",
 		"b999aaa0-4936-4abf-adbe-fcadf1f363eb",
 		"95b91d1d-284d-4160-bf13-ab8171f76834",
+		"29fe7667-9caa-4908-82fe-7e3c8f5d8251",
 		"c3638b81-55e4-485f-83d5-ed9df5b73d8c",
-		"9c7ede62-8453-49fa-95f6-ac7f0457c105",
 		"834550d5-9e5f-4d34-9d1b-d76f1806acee",
 		"89ed272c-94e1-4fbc-833a-c7db2c3b318c",
 		"2cfdf71a-5d9f-43e4-a2db-9cf3a9218096",
@@ -6076,6 +6662,10 @@
 		"1c00598a-8fdf-462e-8c7d-dc7d7cf3b889",
 		"a7f16a8b-08ce-4b2f-8c3e-a68cfe0a5589",
 		"3ccb11d3-f944-446c-b265-d0e54c7192cd",
-		"ed8535d1-b2b7-4e41-b025-66a9d4b7b7c2"
+		"ed8535d1-b2b7-4e41-b025-66a9d4b7b7c2",
+		"71ec4082-5fd2-4a3b-87ad-d4f2499017c9",
+		"79e55042-dae4-49ca-8f7f-49540d754011",
+		"a48aeeff-ef27-44bc-8778-00834bd318b1",
+		"565d2f99-8898-4067-86ed-63d14a8b9969"
 	]
 }

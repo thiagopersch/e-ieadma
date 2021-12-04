@@ -5,7 +5,8 @@ import CreateEBDService from '@modules/eEBD/services/CreateEBDService';
 
 class EBDController {
   public async create(request: Request, response: Response): Promise<Response> {
-    const { ETRIMESTRE_ID, DATE, START_TIME, FINAL_TIME } = request.body;
+    const { ETRIMESTRE_ID, DATE, START_TIME, FINAL_TIME, CALL_TIMEOUT } =
+      request.body;
 
     const createEBD = container.resolve(CreateEBDService);
     const ebd = await createEBD.execute({
@@ -13,6 +14,7 @@ class EBDController {
       DATE,
       START_TIME,
       FINAL_TIME,
+      CALL_TIMEOUT,
     });
 
     return response.json(ebd);

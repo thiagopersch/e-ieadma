@@ -32,6 +32,9 @@ class EBD {
   @Column('time without time zone')
   FINAL_TIME: Date;
 
+  @Column('time without time zone')
+  CALL_TIMEOUT: Date;
+
   @DeleteDateColumn()
   DELETED_AT: Date;
 
@@ -41,4 +44,5 @@ class EBD {
   @UpdateDateColumn()
   UPDATED_AT: Date;
 }
+
 export default EBD;

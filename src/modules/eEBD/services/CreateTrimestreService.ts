@@ -1,5 +1,4 @@
 import { inject, injectable } from 'tsyringe';
-
 import AppError from '@shared/errors/AppError';
 
 import Trimestre from '../infra/typeorm/entities/Trimestre';

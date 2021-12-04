@@ -44,15 +44,39 @@ class EcclesiasticalFieldController {
   }
 
   public async create(request: Request, response: Response): Promise<Response> {
-    const { NAME, LOCATION, TYPE } = request.body;
+    const {
+      NAME,
+      TYPE,
+      STREET,
+      NUMBER,
+      DISTRICT,
+      COMPLEMENT,
+      CEP,
+      CITY,
+      STATE,
+      COUNTRY,
+      PHONE,
+      PHONE_TWO,
+      PHONE_THREE,
+    } = request.body;
 
     const createEcclesiasticalField = container.resolve(
       CreateEcclesiasticalFieldService,
     );
     const ecclesiasticalField = await createEcclesiasticalField.execute({
       NAME,
-      LOCATION,
       TYPE,
+      STREET,
+      NUMBER,
+      DISTRICT,
+      COMPLEMENT,
+      CEP,
+      CITY,
+      STATE,
+      COUNTRY,
+      PHONE,
+      PHONE_TWO,
+      PHONE_THREE,
     });
 
     return response.json(ecclesiasticalField);
