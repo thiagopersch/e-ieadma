@@ -2,7 +2,7 @@
 export const trailingComma = 'all';
 export const arrowParens = 'avoid'; */
 
-  module.exports = {
+module.exports = {
   singleQuote: true,
   trailingComma: 'all',
   arrowParens: 'avoid',

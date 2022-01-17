@@ -14,6 +14,7 @@ function privateRoute(params?: PrivateRouteProps) {
   ): PropertyDescriptor => {
     const originalMethod = propertyDescriptor.value;
 
+    // eslint-disable-next-line no-param-reassign
     propertyDescriptor.value = async function newMethod(...args: any) {
       const { profileId } = await ensureAuthenticated.apply(this, args);
 
