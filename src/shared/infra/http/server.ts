@@ -15,6 +15,7 @@ import ecclesiasticalFieldRouter from '@modules/gecclesiasticalfield/infra/http/
 import appRouter from '@modules/core/infra/http/routes/app.routes';
 import churchMembersRouter from '@modules/achurchmembers/infra/http/routes/churchMembers.routes';
 import ebdAppRouter from '@modules/eEBD/infra/http/routes/ebdApp.routes';
+import sessionsRouter from '@modules/gusers/infra/http/routes/sessions.routes';
 
 import AppError from '@shared/errors/AppError';
 
@@ -35,6 +36,7 @@ app.use('/ecclesiastical-field', ecclesiasticalFieldRouter);
 app.use('/app', appRouter);
 app.use('/church-members', churchMembersRouter);
 app.use('/ebd', ebdAppRouter);
+app.use('/sessions', sessionsRouter);
 
 app.use((err: Error, request: Request, response: Response, _: NextFunction) => {
   if (err instanceof AppError) {

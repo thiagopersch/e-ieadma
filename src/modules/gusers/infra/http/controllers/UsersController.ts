@@ -82,6 +82,23 @@ class UsersController {
 
     return response.status(204).send();
   } */
+
+  /* @privateRoute()
+  public async reset_password(
+    request: Request,
+    response: Response,
+  ): Promise<Response> {
+    const { user_id } = request.body;
+    const { id: authenticated_user } = request.user;
+
+    const changePassword = container.resolve(ResetPasswordService);
+    await changePassword.execute({
+      user_id,
+      authenticated_user,
+    });
+
+    return response.status(204).send();
+  } */
 }
 
 export default UsersController;

@@ -42,8 +42,8 @@ class CreateAppModuleService {
     const accessModulesObj = accessLevels.map(({ ID, CODE }) => ({
       GACCESSLEVELS_ID: ID,
       GAPPMODULES_ID: appModule.ID,
-      READ: CODE === 'ADMIN',
-      WRITE: CODE === 'ADMIN',
+      READ: CODE === 'ADMINISTRADOR',
+      WRITE: CODE === 'ADMINISTRADOR',
     }));
     await this.createAccessModules.execute(accessModulesObj);
 

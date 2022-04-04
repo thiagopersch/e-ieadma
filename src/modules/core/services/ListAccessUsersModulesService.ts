@@ -10,7 +10,7 @@ type ListAccessModuleRequest = {
 @injectable()
 class ListAccessModulesService {
   constructor(
-    @inject('AccessModulesRepository')
+    @inject('AccessUsersModulesRepository')
     private accessModulesRepository: IAccessUsersModulesRepository,
   ) {}
 
