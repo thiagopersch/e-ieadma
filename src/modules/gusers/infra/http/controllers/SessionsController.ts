@@ -44,7 +44,7 @@ class SessionsController {
 
   @privateRoute()
   public async update(request: Request, response: Response): Promise<Response> {
-    const { profile_id } = request.body;
+    const { PROFILE_ID } = request.body;
     const { ID: GUSERS_ID } = request.user;
 
     const showUser = container.resolve(ShowUserService);
@@ -53,7 +53,7 @@ class SessionsController {
     const generateToken = container.resolve(GenerateUserTokenService);
     const { TOKEN, PROFILE } = await generateToken.execute({
       GUSERS_ID: user.ID,
-      GUSERPROFILE_ID: profile_id,
+      GUSERPROFILE_ID: PROFILE_ID,
     });
 
     if (PROFILE) {
